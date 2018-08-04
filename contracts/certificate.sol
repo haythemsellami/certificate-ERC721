@@ -7,7 +7,7 @@ contract Certificate is ERC721Token, Ownable {
     
     using SafeMath for uint256;
 
-    string public constant name = "certificate";
+    string public constant name = "HCertificate";
     string public constant symbol = "HCERT";
 
     /*
