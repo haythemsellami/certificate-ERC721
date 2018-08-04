@@ -20,4 +20,9 @@ contract Certificate is ERC721Token, Ownable {
 
     mapping(uint256 => address) public tokenIndexToOwner;
     */
+
+    constructor() ERC721Token(name, symbol) public { 
+
+    }
+
 }
