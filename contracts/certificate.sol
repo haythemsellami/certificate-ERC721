@@ -15,11 +15,20 @@ contract Certificate is ERC721Token, Ownable {
     }
 
     /**
+     * @dev create a certificate to an address
+     * @param _to address of the future owner of the token
+     * @param _tokenURI token URI for the token
+     */
+    function createCertificate(address _to, string _tokenURI) public {
+        mint(_to, _tokenURI);
+    }
+
+    /**
     * @dev Mints a token to an address with a tokenURI.
     * @param _to address of the future owner of the token
     * @param _tokenURI token URI for the token
     */
-    function mint(address _to, string _tokenURI) public {
+    function mint(address _to, string _tokenURI) internal {
         uint256 newTokenId = _getNextTokenId();
         _mint(_to, newTokenId);
         _setTokenURI(newTokenId, _tokenURI);
