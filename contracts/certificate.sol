@@ -2,9 +2,8 @@ pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/token/ERC721/ERC721Token.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
-import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
-contract Certificate is ERC721Token {
+contract Certificate is ERC721Token, Ownable {
     
     using SafeMath for uint256;
 
