@@ -42,4 +42,13 @@ contract Certificate is ERC721Token, Ownable {
         return totalSupply().add(1); 
     }
 
+    /**
+    * @dev get all tokens ID of an owner
+    * @param _owner owner address
+    * @return uint256[] list of tokens ID
+    */
+    function getOwnerTokens(address _owner) external view returns (uint256[]) {
+        return ownedTokens[_owner];
+    }
+
 }
