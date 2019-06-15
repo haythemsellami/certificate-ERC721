@@ -39,7 +39,7 @@ contract Certificate is ERC721Token, Ownable {
     * @return uint256 for the next token ID
     */
     function _getNextTokenId() private view returns (uint256) {
-        return totalSupply().add(1); 
+        return totalSupply().add(1);
     }
 
     /**
@@ -49,6 +49,15 @@ contract Certificate is ERC721Token, Ownable {
     */
     function getOwnerTokens(address _owner) external view returns (uint256[]) {
         return ownedTokens[_owner];
+    }
+
+    /**
+     * @dev get certificate description
+     * @param _tokenId uint256 ID of the token to query the approval of
+     * @return string representing the description for the given token ID
+     */
+    function getCertificateDescription(uint256 _tokenId) public view returns (string) {
+        return super.tokenURI(_tokenId);
     }
 
 }

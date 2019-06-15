@@ -1,16 +1,23 @@
 {
   "name": "certificate-ERC721",
   "version": "1.0.0",
-  "description": "",
+  "description": "Contracts for issuing certificates",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Haythel Sellami <sellamihaythem96@gmail.com>",
+  "keywords": [
+    "Ethereum", 
+    "Solidity",
+    "Token",
+    "ERC721"
+  ],
   "license": "ISC",
   "dependencies": {
     "openzeppelin-solidity": "1.11.0"
